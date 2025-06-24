@@ -83,18 +83,29 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             <p className="text-purple-600 font-medium mb-6">{celebrity.socialHandle}</p>
 
             {/* Status Indicators */}
-            <div className="grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
-              <div className="flex lg:hidden justify-center">
+            <div className="hidden lg:flex justify-center space-x-2 mb-6">
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Booking Agent
+              </span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Manager
+              </span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Publicist
+              </span>
+            </div>
+
+            <div className="lg:hidden grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
+              <div className="flex justify-center">
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                   Booking Agent
                 </span>
               </div>
               <div className="flex justify-center space-x-2 col-span-1 sm:col-span-2">
-                <span className="hidden lg:block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                  Booking Agent
-                </span>
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                   Manager
