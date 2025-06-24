@@ -110,7 +110,7 @@ export const celebrities: Celebrity[] = [
     id: "5",
     name: "Katheryn Winnick",
     slug: "katheryn-winnick",
-    image: "/celebrity/katheryn.jpg",
+    image: "/celebrity/katheryn2.jpg",
     contactInfo: "Contact Info",
     roles: ["Film Actors", "Supporting Actors", "Television Actors", "Series Regulars"],
     socialHandle: "@katherynwinnick",
