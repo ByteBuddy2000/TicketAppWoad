@@ -199,11 +199,8 @@ export default function TicketsPage({ params }: PageProps) {
                                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2" variant={undefined} size={undefined}                                >
                                     Register
                                 </Button>
-                                <Link
-                                    // onClick={() => handleBooking("private-regular")}
-                                    href="https://t.me/Stanleymgt" target="_blank"
-                                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2">    
-                                    Book Now
+                                 <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                    Buy Now
                                 </Link>
                             </div>
                         </div>
@@ -219,11 +216,8 @@ export default function TicketsPage({ params }: PageProps) {
                                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2" variant={undefined} size={undefined}                                >
                                     Register
                                 </Button>
-                                <Link
-                                href="https://t.me/Stanleymgt" target="_blank"
-                                    // onClick={() => handleBooking("private-vip")}
-                                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2" >
-                                    Book Now
+                                  <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                    Buy Now
                                 </Link>
                             </div>
                         </div>
