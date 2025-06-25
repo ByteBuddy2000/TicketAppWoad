@@ -168,5 +168,68 @@ export const celebrities: Celebrity[] = [
       },
     },
   },
+    {
+      id: "7",
+      name: "Lionel Richie",
+      slug: "lionel-richie",
+      image: "/celebrity/lionel.jpg",
+      contactInfo: "Contact Info",
+      roles: ["Musicians", "Singers", "Songwriters", "Music Producers"],
+      socialHandle: "@lionelrichie",
+      about:
+        "Lionel Richie is an American singer, songwriter, producer, and music icon known for his smooth voice, timeless love songs, and cross-genre appeal. He was born on June 20, 1949, in Tuskegee, Alabama, and rose to fame in the late 1960s as a member of the funk and soul band The Commodores. With them, he delivered hits like “Easy,” “Three Times a Lady,” and “Brick House.” In the 1980s, Richie launched a massively successful solo career, becoming one of the era’s best-selling artists. His solo hits include: “Hello,” “All Night Long (All Night),” “Stuck on You,” “Say You, Say Me,” and “Endless Love” (a duet with Diana Ross). He’s also known for co-writing “We Are the World” with Michael Jackson, a global charity single for famine relief in Africa. Richie has sold over 100 million records worldwide, won multiple Grammy Awards, an Academy Award, and has a Golden Globe. In 2022, he was inducted into the Rock and Roll Hall of Fame. More recently, he’s become widely recognized as a judge on American Idol, where he mentors new talent with warmth and wisdom.",
+      ticketTypes: {
+        regular: {
+          price: 600,
+          description: "Standard access to the concert arena",
+        },
+        vip: {
+          price: 2500,
+          description: "Front row, exclusive lounge access, and backstage meet & greet",
+        },
+      },
+      privateBooking: {
+        regular: {
+          price: 1500,
+          description: "30-minute virtual meet and greet",
+        },
+        vip: {
+          price: 5000,
+          description: "1-hour private session, signed memorabilia, and photo opportunity",
+        },
+      },
+    },
+    {
+      id: "8",
+      name: "Joseph Morgan",
+      slug: "joseph-morgan",
+      image: "/celebrity/joseph-morgan.jpg",
+      contactInfo: "Contact Info",
+      roles: ["Television Actors", "Film Actors", "Directors"],
+      socialHandle: "@josephmorgan",
+      about:
+        "Joseph Morgan is a British actor and director best known for playing Klaus Mikaelson, the original vampire-werewolf hybrid, in The Vampire Diaries and its spin-off The Originals. Born on May 16, 1981, in London and raised in Wales, he trained at the Central School of Speech and Drama. Beyond his breakout vampire role, he’s appeared in series like Titans and Halo, and has directed several episodes of The Originals. Off-screen, he’s married to actress Persia White and is a passionate vegan and philanthropist. In addition to his work in television, Joseph Morgan has also featured in several films, including Immortals and Master and Commander: The Far Side of the World. His talent extends beyond acting—he has a deep interest in storytelling and filmmaking, having written and directed a few short films. Known for his intensity on screen and humility off it, Morgan has built a loyal global fanbase. Whether playing a ruthless villain or a tortured hero, he brings depth and charisma that continue to leave a lasting impression.",
+      ticketTypes: {
+        regular: {
+          price: 500,
+          description: "Standard access to the event arena",
+        },
+        vip: {
+          price: 2000,
+          description: "Front row, exclusive lounge access, and backstage pass",
+        },
+      },
+      privateBooking: {
+        regular: {
+          price: 1000,
+          description: "30-minute secret meeting (virtual or in-person)",
+        },
+        vip: {
+          price: 4000,
+          description: "1-hour session, signed gift, private photoshoot",
+        },
+      },
+    },
+  //
 
 ]
