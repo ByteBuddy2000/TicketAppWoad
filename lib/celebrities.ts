@@ -7,11 +7,11 @@ export interface Celebrity {
   roles: string[]
   socialHandle: string
   about: string
-  ticketTypes: {
+  ticketTypes?: {
     regular: { price: number; description: string }
     vip: { price: number; description: string }
   }
-  privateBooking: {
+  privateBooking?: {
     regular: { price: number; description: string }
     vip: { price: number; description: string }
   }

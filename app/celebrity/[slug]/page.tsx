@@ -81,73 +81,73 @@ export default function CelebrityProfilePage({ params }: PageProps) {
 
             {/* Social Handle */}
             <p className="text-purple-600 font-medium mb-6">{celebrity.socialHandle}</p>
-
+           
             {/* Status Indicators */}
             <div className="hidden lg:flex justify-center space-x-2 mb-6">
-
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                Booking Agent
-              </span>
-              {celebrities.name === "Keanu Reeves" || celebrities.name === "Johnny Depp" || celebrities.name === "Lionel Depp" &&
-                <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                  Manager
-                </Link>
-              }
+              {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
+                <>
+                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    Booking Agent
+                  </Link>
+                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    Manager
+                  </Link>
+                </>
+              )}
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                 <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                 Publicist
               </span>
             </div>
-
+            
             <div className="lg:hidden grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
               <div className="flex justify-center">
-                {celebrities.name === "Keanu Reeves" || celebrities.name === "Johnny Depp" || celebrities.name === "Lionel Depp"
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
+                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    Manager
-                  </span>
-                }
-                <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                  Manager
-                </Link>
+                    Booking Agent
+                  </Link>
+                )}
               </div>
               <div className="flex justify-center space-x-2 col-span-1 sm:col-span-2">
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                  Manager
-                </span>
+                {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
+                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    Manager
+                  </Link>
+                )}
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                   Publicist
                 </span>
               </div>
             </div>
+   
 
-            {/* Buy Ticket Button */}
-            <Link href={`/celebrity/${celebrity.slug}/tickets`}>
-              <Button className="w-fit bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-lg text-sm lg:text-lg" variant={undefined} size={undefined}>
-                🎫 Click To Buy Ticket
-              </Button>
-            </Link>
-          </div>
+          {/* Buy Ticket Button */}
+          <Link href={`/celebrity/${celebrity.slug}/tickets`}>
+            <Button className="w-fit bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-lg text-sm lg:text-lg" variant={undefined} size={undefined}>
+              🎫 Click To Buy Ticket
+            </Button>
+          </Link>
         </div>
+    </div >
 
-        {/* About Section */}
-        <div className="bg-white rounded-lg shadow-xl p-8">
-          <h3 className="text-2xl font-bold text-purple-600 mb-6">About {celebrity.name}</h3>
-          <div className="text-gray-700 leading-relaxed space-y-4">
-            {celebrity.about.split(". ").map((sentence, index) => (
-              <p key={index}>
-                {sentence.trim()}
-                {sentence.includes(".") ? "" : "."}
-              </p>
-            ))}
-          </div>
-        </div>
-      </main>
+    {/* About Section */ }
+  <div div div div div className="bg-white rounded-lg shadow-xl p-8" >
+    <h3 className="text-2xl font-bold text-purple-600 mb-6">About {celebrity.name}</h3>
+    <div className="text-gray-700 leading-relaxed space-y-4">
+      {celebrity.about.split(". ").map((sentence, index) => (
+        <p key={index}>
+          {sentence.trim()}
+          {sentence.includes(".") ? "" : "."}
+        </p>
+      ))}
     </div>
+  </div >
+      </main >
+    </div >
   )
 }
