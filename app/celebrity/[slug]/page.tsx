@@ -89,11 +89,11 @@ export default function CelebrityProfilePage({ params }: PageProps) {
                 <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                 Booking Agent
               </span>
-              {celebrities.name === "Keanu Reeves" &&
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+              {celebrities.name === "Keanu Reeves" || celebrities.name === "Johnny Depp" || celebrities.name === "Lionel Depp" &&
+                <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                   Manager
-                </span>
+                </Link>
               }
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                 <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
@@ -103,16 +103,16 @@ export default function CelebrityProfilePage({ params }: PageProps) {
 
             <div className="lg:hidden grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
               <div className="flex justify-center">
-                {celebrities.name === "Keanu Reeves" &&
+                {celebrities.name === "Keanu Reeves" || celebrities.name === "Johnny Depp" || celebrities.name === "Lionel Depp"
                   <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Manager
                   </span>
                 }
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                  Booking Agent
-                </span>
+                  Manager
+                </Link>
               </div>
               <div className="flex justify-center space-x-2 col-span-1 sm:col-span-2">
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">

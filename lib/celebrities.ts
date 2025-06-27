@@ -47,10 +47,10 @@ export const celebrities: Celebrity[] = [
     socialHandle: "@prideofgypsies",
     about:
       "Jason Momoa is an American actor and producer widely recognized for his commanding screen presence and unforgettable roles in both television and film. He rose to international fame as Khal Drogo in the acclaimed HBO series Game of Thrones, and solidified his status as an action star with his portrayal of the DC superhero Aquaman. Born in Hawaii and raised in Iowa, Momoa brings a unique blend of rugged charm and cultural pride to his roles. His background in modeling and martial arts, combined with his towering physique and charisma, has made him a natural fit for action-packed characters. In addition to Aquaman, he has starred in popular productions such as See, Frontier, and Dune. Beyond acting, Jason Momoa is an environmental advocate, a passionate surfer, and a devoted family man. His off-screen persona is just as captivating—often blending humor, intensity, and a deep love for his Polynesian heritage. With his blend of strength, heart, and authenticity, Jason Momoa continues to captivate audiences and carve out a lasting legacy in Hollywood.",
-    ticketTypes: {
-      regular: { price: 500, description: "Standard access to the event arena" },
-      vip: { price: 2000, description: "Front row, exclusive lounge access, and backstage pass" },
-    },
+    // ticketTypes: {
+    //   regular: { price: 500, description: "Standard access to the event arena" },
+    //   vip: { price: 2000, description: "Front row, exclusive lounge access, and backstage pass" },
+    // },
     privateBooking: {
       regular: { price: 1000, description: "30-minute secret meeting (virtual or in-person)" },
       vip: { price: 4000, description: "1-hour session, signed gift, private photoshoot" },
@@ -85,16 +85,16 @@ export const celebrities: Celebrity[] = [
     socialHandle: "@paulvedere",
     about:
       "Paul Wesley is an American actor, director, and producer best known for his breakout role as Stefan Salvatore in the hit supernatural drama series The Vampire Diaries. With his brooding charm and emotional depth, Wesley quickly became a fan favorite. He has also directed and produced episodes of The Vampire Diaries and its spin-off Legacies. Recently, he joined the Star Trek universe as Captain James T. Kirk in Strange New Worlds, showcasing his range and versatility.",
-    ticketTypes: {
-      regular: {
-        price: 500,
-        description: "Standard access to the event arena",
-      },
-      vip: {
-        price: 2000,
-        description: "Front row, exclusive lounge access, and backstage pass",
-      },
-    },
+    // ticketTypes: {
+    //   regular: {
+    //     price: 500,
+    //     description: "Standard access to the event arena",
+    //   },
+    //   vip: {
+    //     price: 2000,
+    //     description: "Front row, exclusive lounge access, and backstage pass",
+    //   },
+    // },
     privateBooking: {
       regular: {
         price: 1000,
@@ -116,16 +116,16 @@ export const celebrities: Celebrity[] = [
     socialHandle: "@katherynwinnick",
     about:
       "Katheryn Winnick is a Canadian actress best known for her role as Lagertha in the historical drama series Vikings. With her martial arts background, she brings physical intensity to her roles, often performing her own stunts. She has appeared in Big Sky, Wu Assassins, The Dark Tower, and Polar. Katheryn is celebrated for her strength, elegance, and versatility in both film and television.",
-    ticketTypes: {
-      regular: {
-        price: 500,
-        description: "Standard access to the event arena",
-      },
-      vip: {
-        price: 2000,
-        description: "Front row, exclusive lounge access, and backstage pass",
-      },
-    },
+    // ticketTypes: {
+    //   regular: {
+    //     price: 500,
+    //     description: "Standard access to the event arena",
+    //   },
+    //   vip: {
+    //     price: 2000,
+    //     description: "Front row, exclusive lounge access, and backstage pass",
+    //   },
+    // },
     privateBooking: {
       regular: {
         price: 1000,
@@ -147,16 +147,16 @@ export const celebrities: Celebrity[] = [
     socialHandle: "@iansomerhalder",
     about:
       "Ian Somerhalder is an American actor, director, and environmental activist best known for his portrayal of Damon Salvatore in The Vampire Diaries. He began his career in modeling and moved into acting with roles in Lost and The Rules of Attraction. Off-screen, he’s a passionate advocate for the environment through the Ian Somerhalder Foundation. His combination of charisma, talent, and activism makes him a standout figure in entertainment.",
-    ticketTypes: {
-      regular: {
-        price: 500,
-        description: "Standard access to the event arena",
-      },
-      vip: {
-        price: 2000,
-        description: "Front row, exclusive lounge access, and backstage pass",
-      },
-    },
+    // ticketTypes: {
+    //   regular: {
+    //     price: 500,
+    //     description: "Standard access to the event arena",
+    //   },
+    //   vip: {
+    //     price: 2000,
+    //     description: "Front row, exclusive lounge access, and backstage pass",
+    //   },
+    // },
     privateBooking: {
       regular: {
         price: 1000,
@@ -209,16 +209,16 @@ export const celebrities: Celebrity[] = [
       socialHandle: "@josephmorgan",
       about:
         "Joseph Morgan is a British actor and director best known for playing Klaus Mikaelson, the original vampire-werewolf hybrid, in The Vampire Diaries and its spin-off The Originals. Born on May 16, 1981, in London and raised in Wales, he trained at the Central School of Speech and Drama. Beyond his breakout vampire role, he’s appeared in series like Titans and Halo, and has directed several episodes of The Originals. Off-screen, he’s married to actress Persia White and is a passionate vegan and philanthropist. In addition to his work in television, Joseph Morgan has also featured in several films, including Immortals and Master and Commander: The Far Side of the World. His talent extends beyond acting—he has a deep interest in storytelling and filmmaking, having written and directed a few short films. Known for his intensity on screen and humility off it, Morgan has built a loyal global fanbase. Whether playing a ruthless villain or a tortured hero, he brings depth and charisma that continue to leave a lasting impression.",
-      ticketTypes: {
-        regular: {
-          price: 500,
-          description: "Standard access to the event arena",
-        },
-        vip: {
-          price: 2000,
-          description: "Front row, exclusive lounge access, and backstage pass",
-        },
-      },
+      // ticketTypes: {
+      //   regular: {
+      //     price: 500,
+      //     description: "Standard access to the event arena",
+      //   },
+      //   vip: {
+      //     price: 2000,
+      //     description: "Front row, exclusive lounge access, and backstage pass",
+      //   },
+      // },
       privateBooking: {
         regular: {
           price: 1000,

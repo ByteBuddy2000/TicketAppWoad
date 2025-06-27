@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Orbitron } from "next/font/google";
 import { toast } from "sonner"
-import { error } from "console"
 
 const orbitron = Orbitron({
     subsets: ["latin"],
