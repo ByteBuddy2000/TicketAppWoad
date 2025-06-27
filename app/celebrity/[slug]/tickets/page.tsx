@@ -136,49 +136,52 @@ export default function TicketsPage({ params }: PageProps) {
 
             <main className="container mx-auto px-4 py-8 max-w-6xl">
                 {/* Tour Tickets Section */}
-                <div className="mb-12">
-                    <h2 className="text-2xl font-bold text-orange-400 mb-6 flex items-center">
-                        <span className="text-yellow-400 mr-2">🤝</span>
-                        Tour Tickets
-                    </h2>
+                {celebrity.ticketTypes && (
+                    <div className="mb-12">
+                        <h2 className="text-2xl font-bold text-orange-400 mb-6 flex items-center">
+                            <span className="text-yellow-400 mr-2">🤝</span>
+                            Tour Tickets
+                        </h2>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                        {/* Regular Ticket */}
-                        <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
-                            <h3 className="text-xl font-bold text-orange-400 mb-3">Regular Ticket</h3>
-                            <p className="text-gray-300 text-sm mb-4">{celebrity.ticketTypes.regular.description}</p>
-                            <p className="text-2xl font-bold text-white mb-4">Price: ${celebrity.ticketTypes.regular.price}</p>
-                            <div className="space-x-3">
-                                <Button
-                                    onClick={() => handleBooking("regular")}
-                                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2" variant={undefined} size={undefined}                                >
-                                    Register
-                                </Button>
-                                <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
-                                    Buy Now
-                                </Link>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {/* Regular Ticket */}
+                            <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
+                                <h3 className="text-xl font-bold text-orange-400 mb-3">Regular Ticket</h3>
+                                <p className="text-gray-300 text-sm mb-4">{celebrity.ticketTypes.regular.description}</p>
+                                <p className="text-2xl font-bold text-white mb-4">Price: ${celebrity.ticketTypes.regular.price}</p>
+                                <div className="space-x-3">
+                                    <Button
+                                        onClick={() => handleBooking("regular")}
+                                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                    >
+                                        Register
+                                    </Button>
+                                    <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                        Buy Now
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
 
-                        {/* VIP Ticket */}
-                        <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
-                            <h3 className="text-xl font-bold text-orange-400 mb-3">VIP Ticket</h3>
-                            <p className="text-gray-300 text-sm mb-4">{celebrity.ticketTypes.vip.description}</p>
-                            <p className="text-2xl font-bold text-white mb-4">Price: ${celebrity.ticketTypes.vip.price}</p>
-                            <div className="space-x-3">
-                                <Button
-                                    onClick={() => handleBooking("vip")}
-                                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2" variant={undefined} size={undefined}                                >
-                                    Register
-                                </Button>
-                                <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
-                                    Buy Now
-                                </Link>
+                            {/* VIP Ticket */}
+                            <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
+                                <h3 className="text-xl font-bold text-orange-400 mb-3">VIP Ticket</h3>
+                                <p className="text-gray-300 text-sm mb-4">{celebrity.ticketTypes.vip.description}</p>
+                                <p className="text-2xl font-bold text-white mb-4">Price: ${celebrity.ticketTypes.vip.price}</p>
+                                <div className="space-x-3">
+                                    <Button
+                                        onClick={() => handleBooking("vip")}
+                                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                    >
+                                        Register
+                                    </Button>
+                                    <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                        Buy Now
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                )}
                 {/* Private Booking Section */}
                 <div className="mb-12">
                     <h2 className="text-2xl font-bold text-yellow-400 mb-6 flex items-center">
@@ -198,7 +201,7 @@ export default function TicketsPage({ params }: PageProps) {
                                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2" variant={undefined} size={undefined}                                >
                                     Register
                                 </Button>
-                                 <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
                                     Buy Now
                                 </Link>
                             </div>
@@ -215,7 +218,7 @@ export default function TicketsPage({ params }: PageProps) {
                                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2" variant={undefined} size={undefined}                                >
                                     Register
                                 </Button>
-                                  <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
                                     Buy Now
                                 </Link>
                             </div>
