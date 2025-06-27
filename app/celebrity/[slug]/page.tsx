@@ -81,7 +81,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
 
             {/* Social Handle */}
             <p className="text-purple-600 font-medium mb-6">{celebrity.socialHandle}</p>
-           
+
             {/* Status Indicators */}
             <div className="hidden lg:flex justify-center space-x-2 mb-6">
               {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
@@ -101,7 +101,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
                 Publicist
               </span>
             </div>
-            
+
             <div className="lg:hidden grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
               <div className="flex justify-center">
                 {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
@@ -124,29 +124,29 @@ export default function CelebrityProfilePage({ params }: PageProps) {
                 </span>
               </div>
             </div>
-   
 
-          {/* Buy Ticket Button */}
-          <Link href={`/celebrity/${celebrity.slug}/tickets`}>
-            <Button className="w-fit bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-lg text-sm lg:text-lg" variant={undefined} size={undefined}>
-              🎫 Click To Buy Ticket
-            </Button>
-          </Link>
-        </div>
-    </div >
 
-    {/* About Section */ }
-  <div div div div div className="bg-white rounded-lg shadow-xl p-8" >
-    <h3 className="text-2xl font-bold text-purple-600 mb-6">About {celebrity.name}</h3>
-    <div className="text-gray-700 leading-relaxed space-y-4">
-      {celebrity.about.split(". ").map((sentence, index) => (
-        <p key={index}>
-          {sentence.trim()}
-          {sentence.includes(".") ? "" : "."}
-        </p>
-      ))}
-    </div>
-  </div >
+            {/* Buy Ticket Button */}
+            <Link href={`/celebrity/${celebrity.slug}/tickets`}>
+              <Button className="w-fit bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-lg text-sm lg:text-lg" variant={undefined} size={undefined}>
+                🎫 Click To Buy Ticket
+              </Button>
+            </Link>
+          </div>
+        </div >
+
+        {/* About Section */}
+        <div className="bg-white rounded-lg shadow-xl p-8" >
+          <h3 className="text-2xl font-bold text-purple-600 mb-6">About {celebrity.name}</h3>
+          <div className="text-gray-700 leading-relaxed space-y-4">
+            {celebrity.about.split(". ").map((sentence, index) => (
+              <p key={index}>
+                {sentence.trim()}
+                {sentence.includes(".") ? "" : "."}
+              </p>
+            ))}
+          </div>
+        </div >
       </main >
     </div >
   )
