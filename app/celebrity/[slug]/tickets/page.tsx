@@ -153,6 +153,8 @@ export default function TicketsPage({ params }: PageProps) {
                                     <Button
                                         onClick={() => handleBooking("regular")}
                                         className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                        variant="default"
+                                        size="default"
                                     >
                                         Register
                                     </Button>
@@ -171,6 +173,8 @@ export default function TicketsPage({ params }: PageProps) {
                                     <Button
                                         onClick={() => handleBooking("vip")}
                                         className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                        variant="default"
+                                        size="default"
                                     >
                                         Register
                                     </Button>
@@ -182,64 +186,58 @@ export default function TicketsPage({ params }: PageProps) {
                         </div>
                     </div>
                 )}
+
                 {/* Private Booking Section */}
-                <div className="mb-12">
-                    <h2 className="text-2xl font-bold text-yellow-400 mb-6 flex items-center">
-                        <span className="text-yellow-400 mr-2">💎</span>
-                        Book Private Time with {celebrity.name}
-                    </h2>
+                {celebrity.privateBooking && (
+                    <div className="mb-12">
+                        <h2 className="text-2xl font-bold text-yellow-400 mb-6 flex items-center">
+                            <span className="text-yellow-400 mr-2">💎</span>
+                            Book Private Time with {celebrity.name}
+                        </h2>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                        {/* Regular Visit */}
-                        <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
-                            <h3 className="text-xl font-bold text-yellow-400 mb-3">Regular Visit</h3>
-                            <p className="text-gray-300 text-sm mb-4">{celebrity.privateBooking.regular.description}</p>
-                            <p className="text-2xl font-bold text-white mb-4">Price: ${celebrity.privateBooking.regular.price}</p>
-                            <div className="space-x-3">
-                                <Button
-                                    onClick={() => handleBooking("private-regular")}
-                                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2" variant={undefined} size={undefined}                                >
-                                    Register
-                                </Button>
-                                <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
-                                    Buy Now
-                                </Link>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {/* Regular Visit */}
+                            <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
+                                <h3 className="text-xl font-bold text-yellow-400 mb-3">Regular Visit</h3>
+                                <p className="text-gray-300 text-sm mb-4">{celebrity.privateBooking.regular.description}</p>
+                                <p className="text-2xl font-bold text-white mb-4">Price: ${celebrity.privateBooking.regular.price}</p>
+                                <div className="space-x-3">
+                                    <Button
+                                        onClick={() => handleBooking("private-regular")}
+                                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                        variant="default"
+                                        size="default"
+                                    >
+                                        Register
+                                    </Button>
+                                    <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                        Buy Now
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
 
-                        {/* VIP Visit */}
-                        <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
-                            <h3 className="text-xl font-bold text-yellow-400 mb-3">VIP Visit</h3>
-                            <p className="text-gray-300 text-sm mb-4">{celebrity.privateBooking.vip.description}</p>
-                            <p className="text-2xl font-bold text-white mb-4">Price: ${celebrity.privateBooking.vip.price}</p>
-                            <div className="space-x-3">
-                                <Button
-                                    onClick={() => handleBooking("private-vip")}
-                                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2" variant={undefined} size={undefined}                                >
-                                    Register
-                                </Button>
-                                <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
-                                    Buy Now
-                                </Link>
+                            {/* VIP Visit */}
+                            <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
+                                <h3 className="text-xl font-bold text-yellow-400 mb-3">VIP Visit</h3>
+                                <p className="text-gray-300 text-sm mb-4">{celebrity.privateBooking.vip.description}</p>
+                                <p className="text-2xl font-bold text-white mb-4">Price: ${celebrity.privateBooking.vip.price}</p>
+                                <div className="space-x-3">
+                                    <Button
+                                        onClick={() => handleBooking("private-vip")}
+                                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                        variant="default"
+                                        size="default"
+                                    >
+                                        Register
+                                    </Button>
+                                    <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                        Buy Now
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                {/* Payment Methods */}
-                <div className="border-t border-gray-700 pt-8">
-                    <h3 className="text-xl font-bold text-orange-400 mb-6 flex items-center">
-                        <span className="text-green-400 mr-2">💳</span>
-                        Payment Methods Accepted
-                    </h3>
-                    <div className="flex space-x-2">
-                        <img src="https://img.icons8.com/color/48/cash-app.png" alt="Cash App" />
-                        <img src="https://img.icons8.com/color/48/zelle.png" alt="Zelle" />
-                        <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal" />
-                        <img src="https://img.icons8.com/color/48/bitcoin--v1.png" alt="Bitcoin" />
-                        <img src="https://img.icons8.com/color/48/gift-card.png" alt="Gift Card" />
-                    </div>
-                </div>
+                )}
             </main>
 
             {/* Booking Modal */}
