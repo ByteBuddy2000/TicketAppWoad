@@ -94,7 +94,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
                 <>
                   <button
                     onClick={openSupportChat}
-                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
+                    className="cursor-pointer bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
                     type="button"
                   >
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
@@ -102,7 +102,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
                   </button>
                   <button
                     onClick={openSupportChat}
-                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
+                    className="cursor-pointer bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
                     type="button"
                   >
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
@@ -121,7 +121,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
                 {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
                   <button
                     onClick={openSupportChat}
-                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
+                    className="cursor-pointer bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
                     type="button"
                   >
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
@@ -133,7 +133,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
                 {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
                   <button
                     onClick={openSupportChat}
-                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
+                    className="cursor-pointer bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
                     type="button"
                   >
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
@@ -150,7 +150,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
 
             {/* Buy Ticket Button */}
             <Link href={`/celebrity/${celebrity.slug}/tickets`}>
-              <Button className="w-fit bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-lg text-sm lg:text-lg" variant={undefined} size={undefined}>
+              <Button className="cursor-pointer w-fit bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-lg text-sm lg:text-lg" variant={undefined} size={undefined}>
                 🎫 Click To Buy Ticket
               </Button>
             </Link>

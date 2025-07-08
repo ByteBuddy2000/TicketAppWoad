@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import TicketDropdown from "../ticket-dropdown/ticket-dropdown"
-import { motion } from "framer-motion"
 
 export default function HeroSection() {
   const [scrollY, setScrollY] = useState(0)
@@ -81,17 +80,14 @@ export default function HeroSection() {
 
       {/* Main content container with proper spacing */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 pt-24 sm:pt-28 md:pt-32 lg:pt-36 xl:pt-40">
-        {/* DOGSTAR Logo with parallax effect and fade-in */}
-        <motion.div
+        {/* DOGSTAR Logo with parallax effect */}
+        <div
           className="mb-10 sm:mb-12 md:mb-16 lg:mb-20 xl:mb-24"
           style={{
             transform: `translateY(${scrollY * -0.2}px)`,
             willChange: "transform",
             opacity: 0.9,
           }}
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <Image
             src="/logo001.png"
@@ -100,8 +96,9 @@ export default function HeroSection() {
             height={400}
             className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[450px] md:max-w-[650px] lg:max-w-[850px] xl:max-w-[1100px] 2xl:max-w-[1300px] h-auto"
             priority
+            
           />
-        </motion.div>
+        </div>
 
         {/* Album artwork with parallax effect */}
         <div
