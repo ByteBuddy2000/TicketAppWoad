@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react"
 import { celebrities } from "@/lib/celebrities"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import SupportCenter from "@/components/SupportCenter/SupportCenter"
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -149,7 +150,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
 
 
             {/* Buy Ticket Button */}
-            <Link href={`/celebrity/${celebrity.slug}/tickets`}>
+            <Link href={`/celebrity/${celebrity.slug}/ tickets`}>
               <Button className="cursor-pointer w-fit bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-lg text-sm lg:text-lg" variant={undefined} size={undefined}>
                 🎫 Click To Buy Ticket
               </Button>
@@ -169,6 +170,8 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             ))}
           </div>
         </div >
+
+        <SupportCenter />
       </main >
     </div >
   )
