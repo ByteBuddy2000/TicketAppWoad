@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react"
 import { celebrities } from "@/lib/celebrities"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import SupportCenter from "@/components/SupportCenter/SupportCenter"
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -136,6 +137,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             ))}
           </div>
         </div >
+        <SupportCenter />
       </main >
     </div >
   )
