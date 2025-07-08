@@ -5,7 +5,6 @@ import { ArrowLeft } from "lucide-react"
 import { celebrities } from "@/lib/celebrities"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import SupportCenter from "@/components/SupportCenter/SupportCenter"
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -29,13 +28,14 @@ export default function CelebrityProfilePage({ params }: PageProps) {
       </div>
     )
   }
-  // Handler to open Tawk.to chat
+    // Handler to open Tawk.to chat
   const openSupportChat = (e: React.MouseEvent) => {
     e.preventDefault();
     if (typeof window !== "undefined" && (window as any).Tawk_API) {
       (window as any).Tawk_API.maximize();
     }
   };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100">
       {/* Header */}
@@ -57,7 +57,12 @@ export default function CelebrityProfilePage({ params }: PageProps) {
           <div className="p-8 text-center">
             {/* Profile Image */}
             <div className="w-18 h-18 overflow-hidden mx-auto mb-4 bg-gradient-to-br from-white/10 to-white/20 rounded-full flex items-center justify-center border-4 border-cyan-400 relative">
-  
+              {/* <span className="text-white font-bold text-3xl">
+                {celebrity.name
+                  .split(" ")
+                  .map((n) => n[0])
+                  .join("")}
+              </span> */}
               <Image
                 src={celebrity.image}
                 alt={celebrity.name}
@@ -88,22 +93,14 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             <div className="hidden lg:flex justify-center space-x-2 mb-6">
               {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
                 <>
-                  <button
-                    onClick={openSupportChat}
-                    className="cursor-pointer bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
-                    type="button"
-                  >
+                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Booking Agent
-                  </button>
-                  <button
-                    onClick={openSupportChat}
-                    className="cursor-pointer bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
-                    type="button"
-                  >
+                  </Link>
+                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Manager
-                  </button>
+                  </Link>
                 </>
               )}
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
@@ -113,28 +110,20 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             </div>
 
             <div className="lg:hidden grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
-              <div className="flex items-center justify-center">
+              <div className="flex justify-center">
                 {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
-                  <button
-                    onClick={openSupportChat}
-                    className="cursor-pointer bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
-                    type="button"
-                  >
+                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Booking Agent
-                  </button>
+                  </Link>
                 )}
               </div>
               <div className="flex justify-center space-x-2 col-span-1 sm:col-span-2">
                 {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
-                  <button
-                    onClick={openSupportChat}
-                    className="cursor-pointer bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
-                    type="button"
-                  >
+                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Manager
-                  </button>
+                  </Link>
                 )}
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
@@ -145,8 +134,8 @@ export default function CelebrityProfilePage({ params }: PageProps) {
 
 
             {/* Buy Ticket Button */}
-            <Link href={`/celebrity/${celebrity.slug}/ tickets`}>
-              <Button className="cursor-pointer w-fit bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-lg text-sm lg:text-lg" variant={undefined} size={undefined}>
+            <Link href={`/celebrity/${celebrity.slug}/tickets`}>
+              <Button onClick={openSupportChat} className="w-fit bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 rounded-lg text-sm lg:text-lg" variant={undefined} size={undefined}>
                 🎫 Click To Buy Ticket
               </Button>
             </Link>
@@ -165,8 +154,6 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             ))}
           </div>
         </div >
-
-        {/* <SupportCenter /> */}
       </main >
     </div >
   )
