@@ -193,9 +193,14 @@ export default function TicketsPage({ params }: PageProps) {
                                     >
                                         Register
                                     </Button>
-                                    <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                    <Button
+                                       onClick={openSupportChat}
+                                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                        variant="default"
+                                        size="default"
+                                    >
                                         Buy Now
-                                    </Link>
+                                    </Button>
                                 </div>
                             </div>
                         </div>
@@ -225,9 +230,14 @@ export default function TicketsPage({ params }: PageProps) {
                                     >
                                         Register
                                     </Button>
-                                    <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                    <Button
+                                       onClick={openSupportChat}
+                                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                        variant="default"
+                                        size="default"
+                                    >
                                         Buy Now
-                                    </Link>
+                                    </Button>
                                 </div>
                             </div>
 
@@ -245,9 +255,14 @@ export default function TicketsPage({ params }: PageProps) {
                                     >
                                         Register
                                     </Button>
-                                    <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                    <Button
+                                       onClick={openSupportChat}
+                                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                        variant="default"
+                                        size="default"
+                                    >
                                         Buy Now
-                                    </Link>
+                                    </Button>
                                 </div>
                             </div>
                         </div>
@@ -324,7 +339,7 @@ export default function TicketsPage({ params }: PageProps) {
                                 </select>
                             </div>
 
-                            <div className="text-xs text-gray-400 italic">
+                            <div className="hidden text-xs text-gray-400 italic">
                                 *Pay only international <span className="text-cyan-400">&*.</span>
                             </div>
 
