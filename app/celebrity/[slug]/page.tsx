@@ -166,7 +166,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
           </div>
         </div >
 
-        <SupportCenter />
+        {/* <SupportCenter /> */}
       </main >
     </div >
   )
