@@ -28,7 +28,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
       </div>
     )
   }
-    // Handler to open Tawk.to chat
+  // Handler to open Tawk.to chat
   const openSupportChat = (e: React.MouseEvent) => {
     e.preventDefault();
     if (typeof window !== "undefined" && (window as any).Tawk_API) {
@@ -90,27 +90,9 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             <p className="text-purple-600 font-medium mb-6">{celebrity.socialHandle}</p>
 
             {/* Status Indicators */}
-            <div className="hidden lg:flex justify-center space-x-2 mb-6">
-              {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
-                <>
-                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    Booking Agent
-                  </Link>
-                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    Manager
-                  </Link>
-                </>
-              )}
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                Publicist
-              </span>
-            </div>
 
-            <div className="lg:hidden grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
-              <div className="flex justify-center">
+            <div className=" grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
+              <div className="flex items-center justify-center">
                 {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
                   <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
@@ -125,10 +107,10 @@ export default function CelebrityProfilePage({ params }: PageProps) {
                     Manager
                   </Link>
                 )}
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                   Publicist
-                </span>
+                </Link>
               </div>
             </div>
 
