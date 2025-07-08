@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Orbitron } from "next/font/google";
 import { toast } from "sonner"
+import SupportCenter from "@/components/SupportCenter/SupportCenter"
 
 const orbitron = Orbitron({
     subsets: ["latin"],
@@ -101,6 +102,14 @@ export default function TicketsPage({ params }: PageProps) {
         }
     }
 
+    // Handler to open Tawk.to chat
+    const openSupportChat = (e: React.MouseEvent) => {
+        e.preventDefault();
+        if (typeof window !== "undefined" && (window as any).Tawk_API) {
+            (window as any).Tawk_API.maximize();
+        }
+    };
+
     return (
         <div className={`orbitron-page ${orbitron.variable} min-h-screen bg-black text-white`}>
             {/* Header */}
@@ -158,9 +167,15 @@ export default function TicketsPage({ params }: PageProps) {
                                     >
                                         Register
                                     </Button>
-                                    <Link href="https://t.me/Stanleymgt" target="_blank" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-sm">
+                                    <Button
+                                       onClick={openSupportChat}
+                                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2"
+                                        variant="default"
+                                        size="default"
+                                    >
                                         Buy Now
-                                    </Link>
+                                    </Button>
+                          
                                 </div>
                             </div>
 
@@ -238,6 +253,8 @@ export default function TicketsPage({ params }: PageProps) {
                         </div>
                     </div>
                 )}
+
+                <SupportCenter />
             </main>
 
             {/* Booking Modal */}
@@ -318,6 +335,8 @@ export default function TicketsPage({ params }: PageProps) {
                     </div>
                 </div>
             )}
+
+        
         </div>
     )
 }

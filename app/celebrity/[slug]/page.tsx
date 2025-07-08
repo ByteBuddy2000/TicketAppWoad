@@ -29,13 +29,6 @@ export default function CelebrityProfilePage({ params }: PageProps) {
       </div>
     )
   }
-  // Handler to open Tawk.to chat
-  const openSupportChat = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (typeof window !== "undefined" && (window as any).Tawk_API) {
-      (window as any).Tawk_API.maximize();
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100">
