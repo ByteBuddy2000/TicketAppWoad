@@ -57,12 +57,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
           <div className="p-8 text-center">
             {/* Profile Image */}
             <div className="w-18 h-18 overflow-hidden mx-auto mb-4 bg-gradient-to-br from-white/10 to-white/20 rounded-full flex items-center justify-center border-4 border-cyan-400 relative">
-              {/* <span className="text-white font-bold text-3xl">
-                {celebrity.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")}
-              </span> */}
+  
               <Image
                 src={celebrity.image}
                 alt={celebrity.name}
@@ -118,7 +113,7 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             </div>
 
             <div className="lg:hidden grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
-              <div className="flex justify-center">
+              <div className="flex items-center justify-center">
                 {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
                   <button
                     onClick={openSupportChat}

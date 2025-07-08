@@ -3,7 +3,6 @@ import "./globals.css"
 import { Toaster } from "sonner"
 import { Orbitron, Montserrat } from "next/font/google"
 import Head from "next/head";
-import SupportCenter from "@/components/SupportCenter/SupportCenter";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
