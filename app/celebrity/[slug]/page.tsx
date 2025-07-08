@@ -28,7 +28,13 @@ export default function CelebrityProfilePage({ params }: PageProps) {
       </div>
     )
   }
-
+  // Handler to open Tawk.to chat
+  const openSupportChat = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (typeof window !== "undefined" && (window as any).Tawk_API) {
+      (window as any).Tawk_API.maximize();
+    }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100">
       {/* Header */}
@@ -86,14 +92,22 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             <div className="hidden lg:flex justify-center space-x-2 mb-6">
               {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
                 <>
-                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                  <button
+                    onClick={openSupportChat}
+                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
+                    type="button"
+                  >
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Booking Agent
-                  </Link>
-                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                  </button>
+                  <button
+                    onClick={openSupportChat}
+                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
+                    type="button"
+                  >
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Manager
-                  </Link>
+                  </button>
                 </>
               )}
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
@@ -105,18 +119,26 @@ export default function CelebrityProfilePage({ params }: PageProps) {
             <div className="lg:hidden grid grid-cols-1 gap-2 mb-6 sm:grid-cols-2 sm:gap-3">
               <div className="flex justify-center">
                 {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
-                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                  <button
+                    onClick={openSupportChat}
+                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
+                    type="button"
+                  >
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Booking Agent
-                  </Link>
+                  </button>
                 )}
               </div>
               <div className="flex justify-center space-x-2 col-span-1 sm:col-span-2">
                 {(celebrity.name === "Keanu Reeves" || celebrity.name === "Johnny Depp" || celebrity.name === "Lionel Richie") && (
-                  <Link href="https://t.me/Stanleymgt" className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                  <button
+                    onClick={openSupportChat}
+                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center"
+                    type="button"
+                  >
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     Manager
-                  </Link>
+                  </button>
                 )}
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>

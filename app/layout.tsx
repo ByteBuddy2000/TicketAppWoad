@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body cz-shortcut-listen="true">
         {children}
         <Toaster />
-        <SupportCenter />
+        {/* <SupportCenter /> */}
       </body>
     </html>
   )
